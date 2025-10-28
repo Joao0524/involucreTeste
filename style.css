@@ -1,17 +1,26 @@
 /* Definições padrão (Claro) */
 :root {
     --cor-fundo: #fff;
-    --cor-principal: #ffffff;
-    --cor-texto: #333333;
+    --cor-verdeEscuro_Claro: rgba(34, 94, 41, 1);
+    --cor-Preto_Branco: rgba(6, 6, 16, 1);
     --cor-link: #007bff;
+    --cor-semi_transparente: rgba(255, 255, 255, 0.2);
+    --cor-cinza_Branco:#666;
+    --cor-Branco-Preto:#fff;
+    --cor-Branco-SemiPreto:#fff;
+    --corBranco_Cinza:#fff;
     transition: background-color 0.3s, color 0.3s;
 }
 
 body.modo-escuro {
     --cor-fundo: rgba(18, 18, 18, 1);
-    --cor-principal: #1f1f1f;
-    --cor-texto: #e0e0e0;
-    --cor-link: #4da6ff;
+    --cor-verdeEscuro_Claro: rgba(140, 198, 140, 1);
+    --cor-Preto_Branco: #fff;
+    --cor-semi_transparente: rgba(18, 18, 18, 0.2);
+    --cor-cinza_Branco:#fff;
+    --cor-Branco-Preto:#000;
+    --cor-Branco-SemiPreto:rgba(18, 18, 18, 0.2);
+    --cor-Branco_Cinza:#474646;
 }
 
 * {
@@ -26,8 +35,8 @@ html {
 }
 
 body {
-    background-color: #fff;
-    color: #222;
+    background-color: var(--cor-fundo);
+    color: var(--cor-Preto_Branco);
 }
 
 img {
@@ -54,7 +63,7 @@ nav, a {
 nav a {
     text-decoration: none;
     font-size: 15px;
-    color: #000000;
+    color: var(--cor-Preto_Branco);
     margin-left: 70px;
     position: relative;
     font-weight: 500;
@@ -120,7 +129,7 @@ nav a.active::after {
     padding-left: 145px;
     margin-top: -190px;
     font-weight: 600;
-    color: #225E29;
+    color: var(--cor-verdeEscuro_Claro);
 }
 
 #cor {
@@ -172,7 +181,7 @@ nav a.active::after {
     text-align: center;
     font-size: 26px;
     font-weight: 600;
-    color: #225E29;
+    color: var(--cor-verdeEscuro_Claro);
 }
 .divisor, #divisor {
     position: relative;
@@ -185,11 +194,11 @@ nav a.active::after {
     z-index: initial;
     margin-top: 200px;
     padding: 60px 20px;
-    background-color: #FFFFFF; /* Fundo branco */
+    background-color: var(--cor-fundo); /* Fundo branco */
 }
 
 #empresa h2 {
-    color: #225E29; /* Verde Escuro (Consistente com o Hero) */
+    color: var(--cor-verdeEscuro_Claro); /* Verde Escuro (Consistente com o Hero) */
     font-size: 32px;
     text-align: center;
     margin-bottom: 40px;
@@ -214,7 +223,7 @@ nav a.active::after {
 }
 
 .empresa-texto p {
-    color: #333;
+    color: var(--cor-Preto_Branco);
     line-height: 1.6;
     text-align: left; /* Mantido para legibilidade */
 }
@@ -242,7 +251,7 @@ nav a.active::after {
 
 #sobre h2 {
     font-size: 32px;
-    color: #1a1a1a;
+    color: var(--cor-Preto_Branco);
     margin-bottom: 10px;
 }
 
@@ -265,7 +274,7 @@ section {
 
 h2 {
     font-size: 32px;
-    color: #2e6b35;
+    color: pink;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -289,12 +298,12 @@ p.subtitulo {
     justify-content: center;
     max-width: 1000px;
     margin: 0 auto;
-    color: #225E29;
+    color: var(--cor-verdeEscuro_Claro);
 }
 .card:hover {
     transform: scale(1.05);
-    background: #ffffff;
-    color: #0F8F1A;
+    background: var(--cor-Branco-Preto);
+    color: var(--cor-verdeEscuro_Claro);
 }
 #linhas2 {
     z-index: -2;
@@ -304,7 +313,7 @@ p.subtitulo {
     height: 90vh;
 }
 .card {
-    background: rgba(255, 255, 255, 0.2); /* fundo semi-transparente */
+    background:var(--cor-semi_transparente); /* fundo semi-transparente */
     backdrop-filter: blur(5px); /* efeito de vidro fosco */
     -webkit-backdrop-filter: blur(5px); /* suporte Safari */
     border-radius: 10px; /* opcional, para cantos arredondados */
@@ -333,7 +342,7 @@ p.subtitulo {
 
 #planos-section h2 {
     font-size: 32px;
-    color: #1a1a1a;
+    color: var(--cor-Preto_Branco);
     margin-bottom: 10px;
 }
 
@@ -344,7 +353,7 @@ p.subtitulo {
 #planos-section p {
     max-width: 600px;
     margin: 20px auto 40px;
-    color: #666;
+    color: var(--cor-cinza_Branco);
     font-size: 1.2rem;
     text-align: center;
 }
@@ -439,7 +448,7 @@ p.subtitulo {
 
 /* Cartões gerais */
 .card-plano {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--cor-semi_transparente);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 20px;
@@ -470,13 +479,13 @@ p.subtitulo {
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #1a1a1a;
+    color: var(--cor-cinza_Branco);
 }
 
 .card-plano ul li {
     margin-bottom: 10px;
     font-size: 0.9rem;
-    color: #333;
+    color: var(--cor-cinza_Branco);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -525,7 +534,7 @@ p.subtitulo {
 
 .faq-header h1 {
     font-size: 2rem;
-    color: #2b2b2b;
+    color: var(--cor-Preto_Branco);
     font-weight: 500;
 }
 
@@ -537,7 +546,7 @@ p.subtitulo {
 .faq-header p {
     margin-top: 15px;
     font-size: 0.95rem;
-    color: #6c6c6c;
+    color: var(--cor-cinza_Branco);
     line-height: 1.5;
 }
 
@@ -556,7 +565,7 @@ p.subtitulo {
 }
 
 .faq-card {
-    background: #fff;
+    background: var(--cor-Branco-SemiPreto);
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 25px 30px;
@@ -570,13 +579,18 @@ p.subtitulo {
 
 .faq-card p {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--cor-cinza_Branco);
 }
 
 .faq-card:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
     transition: 0.3s;
+}
+
+textarea {
+    background-color: var(--cor-Branco-Cinza);
+    color:var(--cor-Preto_Branco);
 }
 
 .faq-right {
