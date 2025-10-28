@@ -1,20 +1,19 @@
 /* Definições padrão (Claro) */
 :root {
-    --cor-fundo: #fff; 
-    --cor-InvolucreEC: #225E29;  
-    --cor-body: #222; 
-    --cor-fundoSemiTransparente:  rgba(255, 255, 255, 0.2);
-    --cor-PB:#000000;
+    --cor-fundo: #fff;
+    --cor-principal: #ffffff;
+    --cor-texto: #333333;
+    --cor-link: #007bff;
     transition: background-color 0.3s, color 0.3s;
 }
 
-body.modo-escuro { 
-    --cor-fundo: rgba(18, 18, 18, 1); 
-    --cor-InvolucreEC: rgba(135, 201, 136, 1); 
-    --cor-body: #fff; 
-    --cor-fundoSemiTransparente: rgba(38, 38, 38, 0.2);  
-    --cor-PB:#ffffff;
+body.modo-escuro {
+    --cor-fundo: rgba(18, 18, 18, 1);
+    --cor-principal: #1f1f1f;
+    --cor-texto: #e0e0e0;
+    --cor-link: #4da6ff;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -27,8 +26,13 @@ html {
 }
 
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-body);
+    background-color: #fff;
+    color: #222;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 header {
@@ -50,7 +54,7 @@ nav, a {
 nav a {
     text-decoration: none;
     font-size: 15px;
-    color: var(--cor-PB);
+    color: #000000;
     margin-left: 70px;
     position: relative;
     font-weight: 500;
@@ -93,15 +97,16 @@ nav a.active::after {
 #blur {
     z-index: -1;
     position: absolute;
-    width: 210vh;
+    max-width: 100%;
     height: 100vh;
 }
 #linhas1 {
     z-index: -2;
     top: 0;
     position: absolute;
-    width: 200vh;
+    max-width: 100%;
     height: 100vh;
+
 }
 
 .centro {
@@ -115,7 +120,7 @@ nav a.active::after {
     padding-left: 145px;
     margin-top: -190px;
     font-weight: 600;
-    color:var(--cor-InvolucreEC);
+    color: #225E29;
 }
 
 #cor {
@@ -134,7 +139,7 @@ nav a.active::after {
     position: relative;
     width: 530px;
     height: auto;
-    background: var(--cor-fundoSemiTransparente); /* fundo semi-transparente */
+    background: rgba(255, 255, 255, 0.2); /* fundo semi-transparente */
     backdrop-filter: blur(5px); /* efeito de vidro fosco */
     -webkit-backdrop-filter: blur(5px); /* suporte Safari */
     border-radius: 10px; /* opcional, para cantos arredondados */
@@ -167,24 +172,77 @@ nav a.active::after {
     text-align: center;
     font-size: 26px;
     font-weight: 600;
-    color: var(--cor-InvolucreEC);
+    color: #225E29;
 }
 .divisor, #divisor {
     position: relative;
     z-index: 2;
-    width: 200vh;
+    max-width: 100%;
     height: auto;
-    margin-top: 125px;
+    margin-top: 130px;
+}
+#empresa {
+    z-index: initial;
+    margin-top: 200px;
+    padding: 60px 20px;
+    background-color: #FFFFFF; /* Fundo branco */
+}
+
+#empresa h2 {
+    color: #225E29; /* Verde Escuro (Consistente com o Hero) */
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+#empresa h2 span {
+    color: #2fae54; /* Verde de Destaque */
+}
+
+.empresa-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.empresa-texto {
+    flex: 1;
+}
+
+.empresa-texto p {
+    color: #333;
+    line-height: 1.6;
+    text-align: left; /* Mantido para legibilidade */
+}
+
+.equipe-imagem {
+    flex-shrink: 0;
+    width: 45%;
+    background-color: #228B22; /* Verde Escuro da Caixa */
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adicionando sombra sutil para melhor visualização */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+.equipe-imagem, img {
+    border-radius: 20px;
 }
 #sobre {
-    margin-top: 50px;
+    margin-top: -579px;
     text-align: center;
     padding: 60px 20px;
 }
 
 #sobre h2 {
-    font-size: 2.5rem;
-    color: var(--cor-PB);
+    font-size: 32px;
+    color: #1a1a1a;
     margin-bottom: 10px;
 }
 
@@ -206,8 +264,8 @@ section {
 }
 
 h2 {
-    font-size: 2rem;
-    color: pink;
+    font-size: 32px;
+    color: #2e6b35;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -219,7 +277,7 @@ h2 span {
 p.subtitulo {
     max-width: 700px;
     margin: 0 auto 50px;
-    color: pink;
+    color: #6b8f6e;
     line-height: 1.6;
     text-align: center;
 }
@@ -241,8 +299,8 @@ p.subtitulo {
 #linhas2 {
     z-index: -2;
     top: 750px;
-    position: absolute;
-    width: 200vh;
+    position: relative;
+    max-width: 100%;
     height: 90vh;
 }
 .card {
@@ -266,6 +324,7 @@ p.subtitulo {
 /* =====================
    SEÇÃO DE PLANOS
 ===================== */
+
 #planos-section {
     margin-top: 50px;
     text-align: center;
@@ -273,7 +332,7 @@ p.subtitulo {
 }
 
 #planos-section h2 {
-    font-size: 2.5rem;
+    font-size: 32px;
     color: #1a1a1a;
     margin-bottom: 10px;
 }
@@ -284,11 +343,13 @@ p.subtitulo {
 
 #planos-section p {
     max-width: 600px;
-    margin: 0 auto 40px;
+    margin: 20px auto 40px;
     color: #666;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     text-align: center;
 }
+
+/* ESTILO DO TOGGLE SWITCH PARA PLANOS */
 
 .toggle-planos input[type="radio"] {
     position: absolute;
@@ -359,7 +420,15 @@ p.subtitulo {
 
 .toggle-planos #mensal:checked + label {
     color: white;
+
 }
+.container-planos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
 
 .container-planos {
     display: flex;
@@ -443,6 +512,7 @@ p.subtitulo {
 
 .faq-section {
     width: 100%;
+    margin-top: 120px;
     padding: 60px 10%;
     position: relative;
     overflow: hidden;
@@ -660,16 +730,90 @@ p.subtitulo {
 }
 
 #site {
-  width: 1520px;
-  transform-origin: top left; 
+    width: 1520px; /* largura base do design */
+    transform-origin: top left; /* evita que centralize */
 }
- @media (max-width: 1920px) {
-  #site {
-    transform: scale(calc(1200vw / 1920));
-  }
+
+/* Escala proporcional automática */
+@media (max-width: 1400px) {
+    /* Reduz o padding do header para economizar espaço nas laterais */
+    header {
+        padding: 20px 50px;
+    }
+
+    /* Reduz o tamanho da fonte e o padding lateral da frase */
+    #frase {
+        font-size: 40px; /* Reduz de 50px para 40px */
+        padding-left: 50px; /* Reduz de 145px para 50px */
+        margin-top: -150px; /* Ajusta a margem */
+    }
+
+    /* Reposiciona e reduz a caixa de 'conheça' */
+    .conheca {
+        margin-top: -450px; /* Ajusta a posição vertical */
+        margin-left: 550px; /* Ajusta a posição horizontal */
+        width: 450px; /* Reduz a largura */
+    }
+
+    .contexto {
+        margin-left: 550px;
+    }
+
+    #hero {
+        transform: translateY(1000px);
+    }
+    #divisor {
+        transform: translateY(1550px);
+    }
 }
-@media (max-width: 1920px) {
-  body {
-    height: calc(100vh / (100vw / 1920));
-  }
-} 
+@media (max-width: 900px) {
+    /* 1. Header: Ajusta padding e esconde links (opcional, para menu hambúrguer) */
+    header {
+        padding: 20px 20px;
+    }
+    nav a {
+        /* Se for para celular, você provavelmente esconderá o nav e usará um menu hambúrguer */
+        display: none;
+    }
+
+    /* 2. Conteúdo Central: Mudar de linha para coluna */
+    .centro {
+        flex-direction: column; /* Itens empilham verticalmente */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    /* 3. Frase: Ajusta o tamanho da fonte e centraliza */
+    #frase {
+        font-size: 30px; /* Reduz ainda mais a fonte */
+        padding-left: 20px; /* Pequeno padding para não encostar na borda */
+        text-align: center;
+        margin-top: 50px; /* Adiciona espaço acima */
+    }
+
+    /* 4. Caixa 'Conheça': Coloca abaixo da frase e centraliza */
+    .conheca {
+        margin: 30px auto 0; /* Centraliza horizontalmente e adiciona margem */
+        width: 90%; /* Deixa a largura adaptável (máximo 90% da tela) */
+        position: static; /* Remove o posicionamento fixo/absoluto que estava atrapalhando */
+        /* Remova o margin-top negativo excessivo! */
+    }
+
+    .contexto {
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    /* 5. Outros elementos de fundo que usam vh/vw fixos: */
+    #hero, #blur, #linhas1, #linhas2, .divisor {
+        /* Para não forçar a rolagem lateral e se adaptar */
+        width: 100%;
+        height: auto;
+        /* Considere usar display: none; se for apenas um elemento de decoração pesado */
+    }
+    #hero {
+        transform: translateY(520px);
+    }
+    #divisor {
+        transform: translateY(500px);
+    }
+}
