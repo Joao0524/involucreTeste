@@ -750,59 +750,192 @@ textarea {
 /* Escala proporcional automática */
 
 @media (max-width: 900px) {
-    /* 1. Header: Ajusta padding e esconde links (opcional, para menu hambúrguer) */
+    /* ---------------------------------------------------------------- */
+/* CSS PURO (Sem Variáveis) - Foco no Layout Vertical Estilizado    */
+/* ---------------------------------------------------------------- */
 
-    header {
-        padding: 20px 20px;
-    }
-    nav a {
-        /* Se for para celular, você provavelmente esconderá o nav e usará um menu hambúrguer */
-        display: none;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Fundo gradiente verde claro e esmaecido */
+    background: linear-gradient(to bottom, #f0fff0, #e6ffe6);
+    min-height: 100vh;
+}
 
-    /* 2. Conteúdo Central: Mudar de linha para coluna */
-    .centro {
-        flex-direction: column; /* Itens empilham verticalmente */
-        align-items: center; /* Centraliza os itens */
-    }
+/* Container Principal - Simula a largura de um dispositivo móvel */
+#site {
+    position: relative;
+    max-width: 450px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
 
-    /* 3. Frase: Ajusta o tamanho da fonte e centraliza */
-    #frase {
-        font-size: 30px; /* Reduz ainda mais a fonte */
-        padding-left: 20px; /* Pequeno padding para não encostar na borda */
-        text-align: center;
-        margin-top: 50px; /* Adiciona espaço acima */
-    }
+/* ---------------------------------------------------------------- */
+/* HEADER E NAVEGAÇÃO (Menu superior)                               */
+/* ---------------------------------------------------------------- */
+#centro {
+    display: flex;
+    justify-content: center; /* Centraliza o menu */
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+}
 
-    /* 4. Caixa 'Conheça': Coloca abaixo da frase e centraliza */
-    .conheca {
-        margin: 30px auto 0; /* Centraliza horizontalmente e adiciona margem */
-        width: 90%; /* Deixa a largura adaptável (máximo 90% da tela) */
-        position: static; /* Remove o posicionamento fixo/absoluto que estava atrapalhando */
-        /* Remova o margin-top negativo excessivo! */
-    }
+/* Estilo do Menu (Início, Sobre Nós, Planos, FAQ) */
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 0;
+    /* Fundo semi-transparente do menu */
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-    .contexto {
-        margin: 10px auto;
-        width: 90%;
-    }
+nav a {
+    text-decoration: none;
+    color: #1e8449; /* Verde principal */
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 0.85em;
+    transition: color 0.3s;
+}
 
-    /* 5. Outros elementos de fundo que usam vh/vw fixos: */
-    #hero, #blur, #linhas1, #linhas2, .divisor {
-        /* Para não forçar a rolagem lateral e se adaptar */
-        width: 100%;
-        height: auto;
-        /* Considere usar display: none; se for apenas um elemento de decoração pesado */
-    }
-    #hero {
-        transform: translateY(220px);
-    }
-    #divisor {
-        transform: translateY(200px);
-    }
-    footer{
-        margin-left: 50%;
-        width: 50%;
-        height: auto;
-    }
+/* Destaque do link 'Início' */
+nav a.active {
+    border-bottom: 3px solid #27ae60; /* Verde mais claro para o sublinhado */
+    color: #1e8449;
+}
+
+.logo {
+    display: none; /* Oculta o logo no topo conforme a Imagem 3 */
+}
+
+/* ---------------------------------------------------------------- */
+/* IMAGENS DE FUNDO E POSICIONAMENTO (blur, linhas1, hero)          */
+/* ---------------------------------------------------------------- */
+main {
+    position: relative;
+    padding: 0 20px;
+    z-index: 5;
+    min-height: 80vh;
+}
+
+/* Imagens de decoração de fundo (blur e linhas) */
+#blur, #linhas1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1; /* Fundo */
+    opacity: 0.8; 
+}
+#blur {
+    top: -50px;
+    opacity: 0.6;
+}
+
+/* O container 'direita' aloja a imagem 'hero' */
+.direita {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* A Imagem da Heroína (Mulher com Notebook) */
+#hero {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: -100px; /* Posição para simular o corte inferior */
+    left: 0;
+    z-index: 3;
+}
+
+/* ---------------------------------------------------------------- */
+/* CONTEÚDO PRINCIPAL (Frase e Contexto)                            */
+/* ---------------------------------------------------------------- */
+.centro {
+    text-align: left;
+    padding-top: 50px;
+}
+
+#frase {
+    font-size: 2.5em; 
+    font-family: Georgia, serif; /* Fonte de cabeçalho similar */
+    line-height: 1.1;
+    margin: 0;
+    color: #333;
+    font-weight: 300;
+}
+
+/* Aplica a cor verde no texto em negrito */
+.cor {
+    color: #1e8449;
+    font-weight: bold; 
+}
+
+/* Botão "Conheça o Involucre" */
+.conheca {
+    margin-top: 30px;
+}
+
+#conheca {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #27ae60;
+    border-radius: 50px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#conheca-involucre {
+    margin: 0;
+    color: #1e8449;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* Texto de contexto */
+.contexto {
+    margin-top: 20px;
+    padding-bottom: 150px; /* Adiciona espaço para o rodapé/divisor */
+}
+
+#contexto-solução {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.4;
+    max-width: 250px;
+}
+
+/* ---------------------------------------------------------------- */
+/* DIVISOR INFERIOR                                                 */
+/* ---------------------------------------------------------------- */
+.divisor {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 4; /* Fica acima da imagem hero */
+}
+
+#divisor {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* Ajuste de posição vertical (simula o divisor subindo um pouco) */
+    transform: translateY(50%); 
+}
 }
