@@ -748,27 +748,6 @@ textarea {
 }
 
 /* Escala proporcional automática */
-@media (max-width: 1400px) {
-    #site {
-        /* Use uma largura em porcentagem para se adaptar melhor, 
-           e adicione um padding horizontal para que o conteúdo 
-           não toque nas bordas em telas menores que 1230px */
-        width: 105%; 
-        max-width: 1700px; /* Garante que nunca fique maior que 1230px */
-    }
-    #divisor{
-        transform: translateY(50px);
-    }
-    #blur{
-        max-width: 90%; /* Garante que a imagem nunca ultrapasse o container */
-        height: auto;
-    }
-    #linhas1{
-        max-width: 105%; /* Garante que a imagem nunca ultrapasse o container */
-        height: auto;
-    }
-    
-}
 @media (max-width: 900px) {
     /* 1. Header: Ajusta padding e esconde links (opcional, para menu hambúrguer) */
     header {
