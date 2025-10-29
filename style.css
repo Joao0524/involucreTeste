@@ -770,22 +770,53 @@ textarea {
     
 }
 @media (max-width: 900px) {
-    #site {
-        /* Use uma largura em porcentagem para se adaptar melhor, 
-           e adicione um padding horizontal para que o conteúdo 
-           não toque nas bordas em telas menores que 1230px */
-        width: 105%; 
-        max-width: 1700px; /* Garante que nunca fique maior que 1230px */
+    /* 1. Header: Ajusta padding e esconde links (opcional, para menu hambúrguer) */
+    header {
+        padding: 20px 20px;
     }
-    #divisor{
-        transform: translateY(50px);
+    nav a {
+        /* Se for para celular, você provavelmente esconderá o nav e usará um menu hambúrguer */
+        display: none;
     }
-    #blur{
-        max-width: 90%; /* Garante que a imagem nunca ultrapasse o container */
+
+    /* 2. Conteúdo Central: Mudar de linha para coluna */
+    .centro {
+        flex-direction: column; /* Itens empilham verticalmente */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    /* 3. Frase: Ajusta o tamanho da fonte e centraliza */
+    #frase {
+        font-size: 30px; /* Reduz ainda mais a fonte */
+        padding-left: 20px; /* Pequeno padding para não encostar na borda */
+        text-align: center;
+        margin-top: 50px; /* Adiciona espaço acima */
+    }
+
+    /* 4. Caixa 'Conheça': Coloca abaixo da frase e centraliza */
+    .conheca {
+        margin: 30px auto 0; /* Centraliza horizontalmente e adiciona margem */
+        width: 90%; /* Deixa a largura adaptável (máximo 90% da tela) */
+        position: static; /* Remove o posicionamento fixo/absoluto que estava atrapalhando */
+        /* Remova o margin-top negativo excessivo! */
+    }
+
+    .contexto {
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    /* 5. Outros elementos de fundo que usam vh/vw fixos: */
+    #hero, #blur, #linhas1, #linhas2, .divisor {
+        /* Para não forçar a rolagem lateral e se adaptar */
+        width: 100%;
         height: auto;
+        /* Considere usar display: none; se for apenas um elemento de decoração pesado */
     }
-    #linhas1{
-        max-width: 105%; /* Garante que a imagem nunca ultrapasse o container */
-        height: auto;
+    #hero {
+        transform: translateY(220px);
+    }
+    #divisor {
+        transform: translateY(200px);
     }
 }
