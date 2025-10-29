@@ -801,6 +801,7 @@ textarea {
         transform: translateY(200px);
     }
     footer{
+        margin-left: 50%;
         width: 50%;
         height: auto;
     }
