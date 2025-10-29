@@ -137,7 +137,6 @@ nav a.active::after {
 }
 
 #hero {
-    margin-top: -120px;
     width: 98%;
     height: auto;
     z-index: -1;
@@ -750,35 +749,22 @@ textarea {
 
 /* Escala proporcional automática */
 @media (max-width: 1400px) {
-    /* Reduz o padding do header para economizar espaço nas laterais */
-    header {
-        padding: 20px 50px;
-    }
 
-    /* Reduz o tamanho da fonte e o padding lateral da frase */
-    #frase {
-        font-size: 40px; /* Reduz de 50px para 40px */
-        padding-left: 50px; /* Reduz de 145px para 50px */
-        margin-top: -150px; /* Ajusta a margem */
+    #site{
+        width: 1230px;
     }
-
-    /* Reposiciona e reduz a caixa de 'conheça' */
-    .conheca {
-        margin-top: -450px; /* Ajusta a posição vertical */
-        margin-left: 550px; /* Ajusta a posição horizontal */
-        width: 450px; /* Reduz a largura */
+    #divisor{
+        transform: translateY(50px);
     }
-
-    .contexto {
-        margin-left: 550px;
+    #blur{
+        max-width: 90%; /* Garante que a imagem nunca ultrapasse o container */
+        height: auto;
     }
-
-    #hero {
-        transform: translateY(1000px);
+    #linhas1{
+        max-width: 105%; /* Garante que a imagem nunca ultrapasse o container */
+        height: auto;
     }
-    #divisor {
-        transform: translateY(1550px);
-    }
+    
 }
 @media (max-width: 900px) {
     /* 1. Header: Ajusta padding e esconde links (opcional, para menu hambúrguer) */
@@ -825,9 +811,9 @@ textarea {
         /* Considere usar display: none; se for apenas um elemento de decoração pesado */
     }
     #hero {
-        transform: translateY(520px);
+        transform: translateY(220px);
     }
     #divisor {
-        transform: translateY(500px);
+        transform: translateY(200px);
     }
 }
