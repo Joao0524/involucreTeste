@@ -749,9 +749,12 @@ textarea {
 
 /* Escala proporcional automática */
 @media (max-width: 1400px) {
-
-    #site{
-        width: 1230px;
+    #site {
+        /* Use uma largura em porcentagem para se adaptar melhor, 
+           e adicione um padding horizontal para que o conteúdo 
+           não toque nas bordas em telas menores que 1230px */
+        width: 105%; 
+        max-width: 1700px; /* Garante que nunca fique maior que 1230px */
     }
     #divisor{
         transform: translateY(50px);
