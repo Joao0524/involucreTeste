@@ -751,7 +751,7 @@ textarea {
 @media (max-width: 1400px) {
     #site {
 
-        width: 100%; 
+        width: 130%; 
         max-width: 2000px; /* Garante que nunca fique maior que 1230px */
     }
     #divisor{
