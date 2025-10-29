@@ -750,6 +750,7 @@ textarea {
 /* Escala proporcional automática */
 @media (max-width: 900px) {
     /* 1. Header: Ajusta padding e esconde links (opcional, para menu hambúrguer) */
+    
     header {
         padding: 20px 20px;
     }
