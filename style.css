@@ -778,7 +778,6 @@ body {
 
 /* Oculta imagens e section empresa quando a tela for menor que 1500px */
 @media (max-width: 1500px) {
-    #blur,
     #linhas1,
     #linhas2,
     #divisor,
@@ -791,7 +790,7 @@ body {
         padding: 20px 60px;
         flex-direction: column;
         text-align: center;
-        margin-top: -200px;
+        margin-top: -100px;
     }
 
     nav {
