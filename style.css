@@ -794,14 +794,23 @@ body {
     }
 
     nav {
-        margin-top: 15px;
-        border-radius: 50px;
-        background:var(--cor-semi_transparente); /* fundo semi-transparente */
-        backdrop-filter: blur(15px); /* efeito de vidro fosco */
-        -webkit-backdrop-filter: blur(155px); /* suporte Safari */
-        border-radius: 10px; /* opcional, para cantos arredondados */
-        border: 1px solid rgba(94, 93, 93, 0.3); /* contorno leve */
+        display: flex;
+        justify-content: center; /* centraliza os links */
+        align-items: center;
+        gap: 40px; /* espaço entre os itens */
+
+        width: fit-content; /* faz o fundo se ajustar ao conteúdo */
+        margin: 15px auto; /* centraliza horizontalmente */
+
+        padding: 10px 30px;
+        border-radius: 100px;
+
+        background: var(--cor-semi_transparente); /* fundo translúcido */
+        backdrop-filter: blur(15px); /* vidro fosco */
+        -webkit-backdrop-filter: blur(15px); /* Safari */
+        border: 1px solid rgba(94, 93, 93, 0.3);
     }
+
 
     nav a {
         margin: 0 15px;
