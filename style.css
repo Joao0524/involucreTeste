@@ -795,21 +795,33 @@ body {
 
     nav {
         display: flex;
-        justify-content: center; /* centraliza os links */
+        justify-content: center;
         align-items: center;
-        gap: 40px; /* espaço entre os itens */
+        gap: 40px;
 
-        width: fit-content; /* faz o fundo se ajustar ao conteúdo */
-        margin: 15px auto; /* centraliza horizontalmente */
+        width: fit-content;
+        margin: 0 auto;
 
-        padding: 10px 30px;
-        border-radius: 100px;
+        /* ↓ diminua o padding vertical */
+        padding: 6px 30px; /* antes estava tipo 15px 45px */
 
-        background: var(--cor-semi_transparente); /* fundo translúcido */
-        backdrop-filter: blur(15px); /* vidro fosco */
-        -webkit-backdrop-filter: blur(15px); /* Safari */
+        background: var(--cor-semi_transparente);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 50px;
         border: 1px solid rgba(94, 93, 93, 0.3);
+        margin-top: 50px;
     }
+
+    nav a {
+        color: var(--cor-Preto_Branco);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1; /* evita espaço vertical extra */
+        padding: 0; /* garante que os links não adicionem margem */
+    }
+
 
     #sobre{
         margin-top: 50px;
