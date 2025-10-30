@@ -758,7 +758,6 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     /* Fundo gradiente verde claro e esmaecido */
-    background: linear-gradient(to bottom, #f0fff0, #e6ffe6);
     min-height: 100vh;
 }
 
@@ -789,7 +788,7 @@ body {
         padding: 20px 60px;
         flex-direction: column;
         text-align: center;
-        margin-top: -500px;
+        margin-top: -200px;
     }
 
     nav {
