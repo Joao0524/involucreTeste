@@ -761,7 +761,7 @@ body {
 }
 
 #empresa{
-    margin-top: -300px;
+    margin-top: -1000px;
 }
 
 /* =========================
@@ -839,12 +839,11 @@ body {
         padding: 20px;
     }
 
-    .container-planos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        flex-wrap: nowrap; /* garante que fiquem na mesma linha */
+    .container-planos { 
+        flex-direction: row; 
+        align-items: center; 
+        gap: 30px; 
+        display: flex; 
     }
 
 
