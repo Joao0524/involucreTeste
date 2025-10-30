@@ -833,10 +833,13 @@ body {
     }
 
     .container-planos {
-        flex-direction: column;
+        display: flex;
+        justify-content: center;
         align-items: center;
         gap: 30px;
+        flex-wrap: nowrap; /* garante que fiquem na mesma linha */
     }
+
 
     .faq-container {
         flex-direction: column;
