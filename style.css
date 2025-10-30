@@ -762,180 +762,134 @@ body {
     min-height: 100vh;
 }
 
-/* Container Principal - Simula a largura de um dispositivo móvel */
+/* =========================
+   RESPONSIVIDADE GERAL
+========================= */
+
+/* Remove o scale fixo */
 #site {
-    position: relative;
-    max-width: 450px;
+    width: 100%;
+    max-width: 1520px;
     margin: 0 auto;
-    overflow-x: hidden;
+    transform: none;
 }
 
-/* ---------------------------------------------------------------- */
-/* HEADER E NAVEGAÇÃO (Menu superior)                               */
-/* ---------------------------------------------------------------- */
-#centro {
-    display: flex;
-    justify-content: center; /* Centraliza o menu */
-    align-items: center;
-    padding: 20px 0;
-    position: relative;
-    z-index: 10;
+/* Oculta imagens e section empresa quando a tela for menor que 1500px */
+@media (max-width: 1500px) {
+    #blur,
+    #linhas1,
+    #linhas2,
+    #divisor,
+    #hero,
+    #empresa {
+        display: none !important;
+    }
+
+    header {
+        padding: 20px 60px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        margin: 0 15px;
+    }
+
+    .centro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #frase {
+        font-size: 2.5rem;
+        padding: 0;
+        margin-top: 40px;
+    }
+
+    .conheca {
+        margin: 40px auto 0;
+        text-align: center;
+    }
+
+    .contexto {
+        margin: 20px auto;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 0 40px;
+    }
+
+    .card {
+        font-size: 1rem;
+        padding: 20px;
+    }
+
+    .container-planos {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .faq-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .faq-left,
+    .faq-right {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
-/* Estilo do Menu (Início, Sobre Nós, Planos, FAQ) */
-nav {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 400px;
-    padding: 10px 0;
-    /* Fundo semi-transparente do menu */
-    background-color: rgba(255, 255, 255, 0.5); 
-    border-radius: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+/* Responsividade extra para celulares */
+@media (max-width: 900px) {
+    header {
+        padding: 15px 30px;
+    }
 
-nav a {
-    text-decoration: none;
-    color: #1e8449; /* Verde principal */
-    font-weight: bold;
-    padding: 5px 10px;
-    font-size: 0.85em;
-    transition: color 0.3s;
-}
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-/* Destaque do link 'Início' */
-nav a.active {
-    border-bottom: 3px solid #27ae60; /* Verde mais claro para o sublinhado */
-    color: #1e8449;
-}
+    nav a {
+        margin: 10px;
+        font-size: 0.9rem;
+    }
 
-.logo {
-    display: none; /* Oculta o logo no topo conforme a Imagem 3 */
-}
+    #frase {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
 
-/* ---------------------------------------------------------------- */
-/* IMAGENS DE FUNDO E POSICIONAMENTO (blur, linhas1, hero)          */
-/* ---------------------------------------------------------------- */
-main {
-    position: relative;
-    padding: 0 20px;
-    z-index: 5;
-    min-height: 80vh;
-}
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
-/* Imagens de decoração de fundo (blur e linhas) */
-#blur, #linhas1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1; /* Fundo */
-    opacity: 0.8; 
-}
-#blur {
-    top: -50px;
-    opacity: 0.6;
-}
-
-/* O container 'direita' aloja a imagem 'hero' */
-.direita {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    pointer-events: none;
-}
-
-/* A Imagem da Heroína (Mulher com Notebook) */
-#hero {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: absolute;
-    bottom: -100px; /* Posição para simular o corte inferior */
-    left: 0;
-    z-index: 3;
-}
-
-/* ---------------------------------------------------------------- */
-/* CONTEÚDO PRINCIPAL (Frase e Contexto)                            */
-/* ---------------------------------------------------------------- */
-.centro {
-    text-align: left;
-    padding-top: 50px;
-}
-
-#frase {
-    font-size: 2.5em; 
-    font-family: Georgia, serif; /* Fonte de cabeçalho similar */
-    line-height: 1.1;
-    margin: 0;
-    color: #333;
-    font-weight: 300;
-}
-
-/* Aplica a cor verde no texto em negrito */
-.cor {
-    color: #1e8449;
-    font-weight: bold; 
-}
-
-/* Botão "Conheça o Involucre" */
-.conheca {
-    margin-top: 30px;
-}
-
-#conheca {
-    display: inline-block;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 1px solid #27ae60;
-    border-radius: 50px;
-    padding: 10px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-}
-
-#conheca-involucre {
-    margin: 0;
-    color: #1e8449;
-    font-weight: bold;
-    font-size: 1em;
-}
-
-/* Texto de contexto */
-.contexto {
-    margin-top: 20px;
-    padding-bottom: 150px; /* Adiciona espaço para o rodapé/divisor */
-}
-
-#contexto-solução {
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.4;
-    max-width: 250px;
-}
-
-/* ---------------------------------------------------------------- */
-/* DIVISOR INFERIOR                                                 */
-/* ---------------------------------------------------------------- */
-.divisor {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    z-index: 4; /* Fica acima da imagem hero */
-}
-
-#divisor {
-    display: block;
-    width: 100%;
-    height: auto;
-    /* Ajuste de posição vertical (simula o divisor subindo um pouco) */
-    transform: translateY(50%); 
+    .card-plano {
+        width: 100%;
+        max-width: 320px;
+    }
 }
 }
