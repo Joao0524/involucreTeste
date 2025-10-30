@@ -789,7 +789,7 @@ body {
         padding: 20px 60px;
         flex-direction: column;
         text-align: center;
-        margin-top: -1500px;
+        margin-top: -500px;
     }
 
     nav {
@@ -798,6 +798,10 @@ body {
 
     nav a {
         margin: 0 15px;
+    }
+
+    #sobre{
+        margin-top: 100px;
     }
 
     .centro {
