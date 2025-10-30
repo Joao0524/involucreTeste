@@ -797,10 +797,10 @@ body {
         margin-top: 15px;
         border-radius: 50px;
         background:var(--cor-semi_transparente); /* fundo semi-transparente */
-        backdrop-filter: blur(5px); /* efeito de vidro fosco */
-        -webkit-backdrop-filter: blur(5px); /* suporte Safari */
+        backdrop-filter: blur(15px); /* efeito de vidro fosco */
+        -webkit-backdrop-filter: blur(155px); /* suporte Safari */
         border-radius: 10px; /* opcional, para cantos arredondados */
-        border: 1px solid rgba(0, 0, 0, 0.3); /* contorno leve */
+        border: 1px solid rgba(94, 93, 93, 0.3); /* contorno leve */
     }
 
     nav a {
