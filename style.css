@@ -757,8 +757,11 @@ textarea {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    /* Fundo gradiente verde claro e esmaecido */
     min-height: 100vh;
+}
+
+#empresa{
+    margin-top: -300px;
 }
 
 /* =========================
