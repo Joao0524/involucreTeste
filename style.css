@@ -895,39 +895,9 @@ body {
         gap: 10px;
     }
 }
-
-/* Responsividade extra para celulares */
-@media (max-width: 900px) {
-    body{
-        background-color: pink;
-    }
-    header {
-        padding: 15px 30px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav a {
-        margin: 10px;
-        font-size: 0.9rem;
-    }
-
-    #frase {
-        font-size: 1.8rem;
-        line-height: 1.2;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .card-plano {
-        width: 100%;
-        max-width: 320px;
-    }
 }
+@media (max-width: 1700px){
+    body{
+        width: 500px;
+    }
 }
