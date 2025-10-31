@@ -23,16 +23,6 @@ body.modo-escuro {
     --cor-Branco_Cinza:#474646;
 }
 
-#divisor.escuro{
-    -webkit-mask-image: url('divisor.png');
-    mask-image: url('divisor.png');
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    background-color: rgba(18, 18, 18, 1);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -231,6 +221,7 @@ nav a.active::after {
     flex: 1;
 }
 
+
 .empresa-texto p {
     color: var(--cor-Preto_Branco);
     line-height: 1.6;
@@ -260,7 +251,7 @@ nav a.active::after {
 
 #sobre h2 {
     font-size: 32px;
-    color: var(--cor-Preto_Branco);
+    color: #1a1a1a;
     margin-bottom: 10px;
 }
 
@@ -281,7 +272,12 @@ section {
     overflow: hidden;
 }
 
-
+h2 {
+    font-size: 32px;
+    color: #2e6b35;
+    margin-bottom: 10px;
+    text-align: center;
+}
 
 h2 span {
     color: #2fae54;
@@ -388,7 +384,6 @@ p.subtitulo {
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-weight: 600;
     font-size: 1.1rem;
     width: 50%;
     padding: 10px 20px;
@@ -536,6 +531,7 @@ p.subtitulo {
     margin-bottom: 60px;
 }
 
+
 .faq-header h1 {
     font-size: 2rem;
     color: var(--cor-Preto_Branco);
@@ -580,6 +576,7 @@ p.subtitulo {
     font-size: 1.1rem;
     margin-bottom: 8px;
 }
+
 
 .faq-card p {
     font-size: 0.9rem;
@@ -756,175 +753,175 @@ textarea {
 
 @media (max-width: 900px) {
     /* ---------------------------------------------------------------- */
-/* CSS PURO (Sem Variáveis) - Foco no Layout Vertical Estilizado    */
-/* ---------------------------------------------------------------- */
+    /* CSS PURO (Sem Variáveis) - Foco no Layout Vertical Estilizado    */
+    /* ---------------------------------------------------------------- */
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-}
-
-#empresa{
-    margin-top: -1000px;
-}
-
-/* =========================
-   RESPONSIVIDADE GERAL
-========================= */
-
-/* Remove o scale fixo */
-#site {
-    width: 100%;
-    max-width: 1520px;
-    margin: 0 auto;
-    transform: none;
-}
-
-/* Oculta imagens e section empresa quando a tela for menor que 1500px */
-@media (max-width: 1500px) {
-    #linhas1,
-    #linhas2,
-    #divisor,
-    #hero,
-    #empresa {
-        display: none !important;
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
     }
 
-    header {
-        padding: 20px 60px;
-        flex-direction: column;
-        text-align: center;
-        margin-top: -100px;
+    #empresa{
+        margin-top: -1000px;
     }
 
-    nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
+    /* =========================
+       RESPONSIVIDADE GERAL
+    ========================= */
 
-        width: fit-content;
+    /* Remove o scale fixo */
+    #site {
+        width: 100%;
+        max-width: 1520px;
         margin: 0 auto;
-
-        /* ↓ diminua o padding vertical */
-        padding: 6px 30px; /* antes estava tipo 15px 45px */
-
-        background: var(--cor-semi_transparente);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        border-radius: 50px;
-        border: 1px solid rgba(94, 93, 93, 0.3);
-        margin-top: 50px;
+        transform: none;
     }
 
-    nav a {
-        color: var(--cor-Preto_Branco);
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 1rem;
-        line-height: 1; /* evita espaço vertical extra */
-        padding: 0; /* garante que os links não adicionem margem */
+    /* Oculta imagens e section empresa quando a tela for menor que 1500px */
+    @media (max-width: 1500px) {
+        #linhas1,
+        #linhas2,
+        #divisor,
+        #hero,
+        #empresa {
+            display: none !important;
+        }
+
+        header {
+            padding: 20px 60px;
+            flex-direction: column;
+            text-align: center;
+            margin-top: -100px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+
+            width: fit-content;
+            margin: 0 auto;
+
+            /* ↓ diminua o padding vertical */
+            padding: 6px 30px; /* antes estava tipo 15px 45px */
+
+            background: var(--cor-semi_transparente);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 50px;
+            border: 1px solid rgba(94, 93, 93, 0.3);
+            margin-top: 50px;
+        }
+
+        nav a {
+            color: var(--cor-Preto_Branco);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1; /* evita espaço vertical extra */
+            padding: 0; /* garante que os links não adicionem margem */
+        }
+
+
+        #sobre{
+            margin-top: 50px;
+        }
+
+        .centro {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #frase {
+            font-size: 3rem;
+            padding: 0;
+            margin-top: 40px;
+        }
+
+        .conheca {
+            margin: 40px auto 0;
+            text-align: center;
+        }
+
+        .contexto {
+            margin: 20px auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .cards {
+            grid-template-columns: 1fr;
+            padding: 0 40px;
+        }
+
+        .card {
+            font-size: 1rem;
+            padding: 20px;
+        }
+
+        .container-planos {
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
+            display: flex;
+        }
+
+
+        .faq-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .faq-left,
+        .faq-right {
+            width: 100%;
+        }
+
+        .footer {
+            flex-direction: column;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .footer-bottom {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 
+    /* Responsividade extra para celulares */
+    @media (max-width: 900px) {
+        header {
+            padding: 15px 30px;
+        }
 
-    #sobre{
-        margin-top: 50px;
+        nav {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            margin: 10px;
+            font-size: 0.9rem;
+        }
+
+        #frase {
+            font-size: 1.8rem;
+            line-height: 1.2;
+        }
+
+        .cards {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card-plano {
+            width: 100%;
+            max-width: 320px;
+        }
     }
-
-    .centro {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    #frase {
-        font-size: 3rem;
-        padding: 0;
-        margin-top: 40px;
-    }
-
-    .conheca {
-        margin: 40px auto 0;
-        text-align: center;
-    }
-
-    .contexto {
-        margin: 20px auto;
-        text-align: center;
-        font-size: 18px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-        padding: 0 40px;
-    }
-
-    .card {
-        font-size: 1rem;
-        padding: 20px;
-    }
-
-    .container-planos { 
-        flex-direction: row; 
-        align-items: center; 
-        gap: 30px; 
-        display: flex; 
-    }
-
-
-    .faq-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .faq-left,
-    .faq-right {
-        width: 100%;
-    }
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-/* Responsividade extra para celulares */
-@media (max-width: 900px) {
-    header {
-        padding: 15px 30px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav a {
-        margin: 10px;
-        font-size: 0.9rem;
-    }
-
-    #frase {
-        font-size: 1.8rem;
-        line-height: 1.2;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .card-plano {
-        width: 100%;
-        max-width: 320px;
-    }
-}
 }
