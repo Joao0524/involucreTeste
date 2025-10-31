@@ -47,7 +47,7 @@ function changeTheme(event) {
     if (selectedTheme === 'escuro') {
         body.classList.add('modo-escuro');
         const img = document.getElementById('divisor');
-        img.src = '';
+        img.src = 'Untitled (17).png'
     } else { 
         body.classList.remove('modo-escuro');
     }
