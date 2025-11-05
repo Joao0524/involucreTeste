@@ -9,9 +9,9 @@
     --cor-Branco-Preto:#fff;
     --cor-Branco-SemiPreto:#fff;
     --cor-Branco_Cinza:#fff;
-    transition: background-color 0.3s, color 0.3s;
-}
 
+}
+/* Definições para o modo escuro */
 body.modo-escuro {
     --cor-fundo: rgba(18, 18, 18, 1);
     --cor-verdeEscuro_Claro: rgba(140, 198, 140, 1);
@@ -21,6 +21,15 @@ body.modo-escuro {
     --cor-Branco-Preto:#000;
     --cor-Branco-SemiPreto:rgba(18, 18, 18, 0.2);
     --cor-Branco_Cinza:#474646;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+@font-face {
+    font-family: "Stinger Fit";
+    src: url("../fonts/StingerFit.woff2") format("woff2"),
+    url("../fonts/StingerFit.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -28,6 +37,7 @@ body.modo-escuro {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Alexandria', sans-serif;
+    transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
 }
 
 html {
@@ -117,11 +127,10 @@ nav a.active::after {
     height: 100vh;
 
 }
-
 .centro {
     display: flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 #frase {
@@ -171,7 +180,7 @@ nav a.active::after {
     margin-top: -10px;
     margin-left: 700px;
 }
-.contexto, p{
+.context p{
     text-align: justify;
     font-size: 20px;
 }
@@ -251,7 +260,7 @@ nav a.active::after {
 
 #sobre h2 {
     font-size: 32px;
-    color: #1a1a1a;
+    color: var(--cor-Preto_Branco);
     margin-bottom: 10px;
 }
 
@@ -325,7 +334,7 @@ p.subtitulo {
     padding: 30px 20px;
     transition: transform 0.3s ease;
 }
-.card, p{
+.card p{
     text-align: center;
     font-size: 18px;
 }
@@ -350,7 +359,7 @@ p.subtitulo {
     color: #1f8e3f;
 }
 
-#planos-section p {
+#planos-section #p-planos {
     max-width: 600px;
     margin: 20px auto 40px;
     color: var(--cor-cinza_Branco);
@@ -437,13 +446,36 @@ p.subtitulo {
     flex-wrap: wrap;
 }
 
-
-.container-planos {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+.btn-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--cor-verdeEscuro_Claro);
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    margin: 20px;
 }
+
+#icone-modo{
+    width: 50px;
+    height: auto;
+}
+
+
+img {
+    position: relative;
+    z-index: 1;
+}
+
+#bnt-modo {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: auto;
+}
+
 
 /* Cartões gerais */
 .card-plano {
@@ -479,6 +511,10 @@ p.subtitulo {
     font-weight: 700;
     margin-bottom: 20px;
     color: var(--cor-cinza_Branco);
+}
+
+.card-plano.destaque h4{
+   color: #ffffff;
 }
 
 .card-plano ul li {
@@ -579,6 +615,7 @@ p.subtitulo {
 
 
 .faq-card p {
+    text-align: left;
     font-size: 0.9rem;
     color: var(--cor-cinza_Branco);
 }
@@ -646,7 +683,7 @@ textarea {
 .footer {
     background-color: #17923f;
     color: #fff;
-    padding: 60px 10%;
+    padding: 40px 10%;
     display: flex;
     flex-direction: column;
     margin-top: 100px;
@@ -671,7 +708,7 @@ textarea {
 .footer-column h3 {
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin: 0 0 8px;
 }
 
 .footer-column ul {
@@ -692,12 +729,10 @@ textarea {
     color: #fff;
 }
 
-.newsletter p {
+.newsletter #texto-restrito {
     font-size: 0.9rem;
     color: #ccc;
-    margin: 10px 0 20px;
-    line-height: 1.5;
-
+    margin: 4px 0 10px;
 }
 
 .newsletter button {
@@ -749,12 +784,15 @@ textarea {
     transform-origin: top left; /* evita que centralize */
 }
 
+
+
 /* Escala proporcional automática */
 
 @media (max-width: 900px) {
     /* ---------------------------------------------------------------- */
     /* CSS PURO (Sem Variáveis) - Foco no Layout Vertical Estilizado    */
     /* ---------------------------------------------------------------- */
+
 
     body {
         margin: 0;
@@ -787,6 +825,8 @@ textarea {
         #empresa {
             display: none !important;
         }
+
+
 
         header {
             padding: 20px 60px;
@@ -928,4 +968,11 @@ textarea {
             max-width: 320px;
         }
     }
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #eef5ef inset !important;
+    box-shadow: 0 0 0 1000px #eef5ef inset !important;
+    transition: background-color 9999s ease-out 0s;
+    -webkit-border-radius: 20px;
 }
